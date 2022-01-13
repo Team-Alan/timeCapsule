@@ -16,7 +16,7 @@
     box-sizing: border-box;
     background: #E3D2CA;
     text-align: center;
-    background-image: url("../img/letter.jpg");
+    background-image: url("img/letter.jpg");
     background-size: 800px 800px;
 }
 .left, .right {
