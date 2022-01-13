@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>HTML CSS Left Right Split</title>
+    <link rel="stylesheet" href="../templates/maincss.css">
+</head>
+
+<body>
+<div class="wrapper">
+
+    <div class="left"> <!--left-side 컨셉이나 취지등의 정보-->
+        <h1>Team Alan</h1>
+        <br>
+        <h2>info</h2>
+    </div>
+
+    <div class="center"> <!--이 부분 iframe으로 해서 좌우 고정 고민 중입니다.-->
+    </div>
+
+    <div class="right">
+        <h1>SOUND</h1> <!--사운드, 아이콘은 자잘한 애니메이션 효과를 넣을 수 있을 것 같아 SVG로 하였습니다.-->
+        <br>            <!--우선 사운드를 찾아 넣어야겠네요. 이후 볼륨 조절 작업 하죠-->
+        <ul>
+        <li><label>Wave</label></li>
+        <svg class="icon icon-play2"><use xlink:href="#icon-play2"></use>
+            <symbol id="icon-play2" viewBox="0 0 32 32">
+                <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z"></path>
+            </symbol>
+        </svg>
+        <input class="my-slider" type="range" min="0" max="100" step="1" value="0">
+
+
+        <li><label>Wind</label></li>
+            <svg class="icon icon-play2"><use xlink:href="#icon-play2"></use>
+                <symbol id="icon-play2" viewBox="0 0 32 32">
+                    <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z"></path>
+                </symbol>
+            </svg>
+            <input class="my-slider" type="range" min="0" max="100" step="1" value="0">
+
+
+        <li><label>Bird</label></li>
+            <svg class="icon icon-play2"><use xlink:href="#icon-play2"></use>
+                <symbol id="icon-play2" viewBox="0 0 32 32">
+                    <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z"></path>
+                </symbol>
+            </svg>
+            <input class="my-slider" type="range" min="0" max="100" step="1" value="0">
+
+        </ul>
+    </div>
+</div>
+</body>
+</html>
