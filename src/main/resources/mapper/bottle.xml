@@ -2,6 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.kakao.timeCapsule.mapper.bottleMapper">
+<mapper namespace="com.kakao.timeCapsule.mapper.BottleMapper">
 
+    <resultMap id="content" type="com.kakao.timeCapsule.domain.Content">
+        <result property="id" column="id" />
+        <result property="content" column="content" />
+        <result property="uploadPath" column="uploadPath" />
+        <result property="fileName" column="fileName" />
+        <result property="write_date" column="write_date" />
+        <result property="bottle_id" column="bottle_id" />
+    </resultMap>
+
+    <select id="getBottle" resultType="int">
+        select
+            id
+        from bottle
+        where id != #{id}
+    </select>
+
+    <select id="getContents" resultMap="content">
+        select
+            *
+        from content
+        where bottle_id=#{id}
+    </select>
 </mapper>
