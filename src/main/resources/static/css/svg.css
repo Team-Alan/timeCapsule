@@ -1,0 +1,409 @@
+body {
+    background: #9fc9eb;
+}
+
+svg {
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    svg {
+        width: 70%;
+        padding: 0 15%;
+    }
+}
+
+
+/*  Linking Animation  */
+
+
+/*  Clouds  */
+
+.cloud-1 {
+    -webkit-animation: clouds-1 8s ease-in-Out infinite;
+    -o-animation: clouds-1 8s ease-in-Out infinite;
+    animation: clouds-1 8s ease-in-Out infinite;
+}
+
+.cloud-2 {
+    -webkit-animation: clouds-1 12s ease-in-Out infinite;
+    -o-animation: clouds-1 12s ease-in-Out infinite;
+    animation: clouds-1 12s ease-in-Out infinite;
+}
+
+.cloud-3 {
+    -webkit-animation: clouds-2 14s ease-in-Out infinite;
+    -o-animation: clouds-2 14s ease-in-Out infinite;
+    animation: clouds-2 14s ease-in-Out infinite;
+}
+
+
+/*  Fire  */
+
+.fire-1 {
+    -webkit-animation: flame-1 2s ease-Out infinite;
+    -o-animation: flame-1 2s ease-Out infinite;
+    animation: flame-1 2s ease-Out infinite;
+    transform-origin: 337px 445.75px;
+}
+
+.fire-2 {
+    -webkit-animation: flame-2 1.5s ease-Out infinite;
+    -o-animation: flame-2 1.5s ease-Out infinite;
+    animation: flame-2 1.5s ease-Out infinite;
+    transform-origin: 165.3px 450.89px;
+}
+
+.fire-3 {
+    -webkit-animation: flame-3 1.3s ease-Out infinite;
+    -o-animation: flame-3 1.3s ease-Out infinite;
+    animation: flame-3 1.3s ease-Out infinite;
+    transform-origin: 171.195px 451.39px;
+}
+
+.firelight {
+    -webkit-animation: fire-light 3s ease-Out infinite;
+    -o-animation: fire-light 3s ease-Out infinite;
+    animation: fire-light 3s ease-Out infinite;
+    transform-origin: 339.36px 468.15px;
+}
+
+
+/*  Fishing  */
+
+.ripple-1 {
+    -webkit-animation: water-ripple-1 5s ease-Out infinite;
+    -o-animation: water-ripple-1 5s ease-Out infinite;
+    animation: water-ripple-1 5s ease-Out infinite;
+    transform-origin: 594.48px 545.96px;
+}
+
+.ripple-2 {
+    -webkit-animation: water-ripple-2 5s ease-Out infinite;
+    -o-animation: water-ripple-2 5s ease-Out infinite;
+    animation: water-ripple-2 5s ease-Out infinite;
+    transform-origin: 594.48px 545.96px;
+}
+
+
+/*  Fishing Rod  */
+
+.rod-line {
+    -webkit-animation: rod-and-line 4s ease-Out infinite;
+    -o-animation: rod-and-line 4s ease-Out infinite;
+    animation: rod-and-line 4s ease-Out infinite;
+}
+
+.fishing-line {
+    -webkit-animation: line 4s ease-Out infinite;
+    -o-animation: line 4s ease-Out infinite;
+    animation: line 4s ease-Out infinite;
+}
+
+
+/*  Blinking Eyes  */
+
+.eyes {
+    -webkit-animation: blinking 7s ease-Out infinite;
+    -o-animation: blinking 7s ease-Out infinite;
+    animation: blinking 7s ease-Out infinite;
+    transform-origin: 432.72px 442.15px;
+}
+
+
+/*  Windy Trees  */
+
+.tree-1 {
+    -webkit-animation: trees-1 10s ease-Out infinite;
+    -o-animation: trees-1 10s ease-Out infinite;
+    animation: trees-1 10s ease-Out infinite;
+}
+
+.tree-2 {
+    -webkit-animation: trees-2 12.5s ease-Out infinite;
+    -o-animation: trees-2 12.5s ease-Out infinite;
+    animation: trees-2 12.5s ease-Out infinite;
+}
+
+.tree-3 {
+    -webkit-animation: trees-1 15s ease-Out infinite;
+    -o-animation: trees-1 15s ease-Out infinite;
+    animation: trees-1 15s ease-Out infinite;
+}
+
+
+/*  Windy Bush  */
+
+.bush {
+    -webkit-animation: bush 14s ease-Out infinite;
+    -o-animation: bush 14s ease-Out infinite;
+    animation: bush 14s ease-Out infinite;
+}
+
+
+/*  Animation  */
+
+
+/*  Clouds  */
+
+@keyframes clouds-1 {
+    0% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes clouds-2 {
+    0% {
+        transform: translateX(-30px);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        transform: translateX(-30px);
+    }
+}
+
+
+/*  Fire  */
+
+@keyframes flame-1 {
+    0% {
+        transform: scaleY(-.8);
+    }
+    50% {
+        transform: scaleY(-1.2);
+    }
+    100% {
+        transform: scaleY(-.8);
+    }
+}
+
+@keyframes flame-2 {
+    0% {
+        transform: scaleY(-.8);
+    }
+    50% {
+        transform: scaleY(-1.2);
+    }
+    100% {
+        transform: scaleY(-.8);
+    }
+}
+
+@keyframes flame-3 {
+    0% {
+        transform: scaleY(-.8);
+    }
+    50% {
+        transform: scaleY(-1.2);
+    }
+    100% {
+        transform: scaleY(-.8);
+    }
+}
+
+@keyframes fire-light {
+    0% {
+        opacity: .7;
+        transform: scale(-.7)
+    }
+    50% {
+        opacity: .4;
+        transform: scale(-1);
+    }
+    100% {
+        opacity: .7;
+        transform: scale(-.7);
+    }
+}
+
+
+/*  Fishing  */
+
+@keyframes water-ripple-1 {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes water-ripple-2 {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+/*  Rod and Line  */
+
+@keyframes rod-and-line {
+    0% {
+        transform: skew(0deg) translateX(0px);
+    }
+    50% {
+        transform: skew(-10deg) translateX(83px);
+    }
+    100% {
+        transform: skew(0deg) translateX(0px);
+    }
+}
+
+@keyframes line {
+    0% {
+        transform: skew(0deg) translateX(0px);
+    }
+    50% {
+        transform: skew(-5deg) translateX(48px);
+    }
+    100% {
+        transform: skew(0deg) translateX(0px);
+    }
+}
+
+
+/*  Blinking Eyes*/
+
+@keyframes blinking {
+    5% {
+        transform: scaleY(1);
+    }
+    10% {
+        transform: scaleY(.2);
+    }
+    15% {
+        transform: scaleY(1);
+    }
+    20% {
+        transform: scaleY(1);
+    }
+    25% {
+        transform: scaleY(1);
+    }
+    30% {
+        transform: scaleY(1);
+    }
+    35% {
+        transform: scaleY(1);
+    }
+    40% {
+        transform: scaleY(1);
+    }
+    45% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+    55% {
+        transform: scaleY(1);
+    }
+    60% {
+        transform: scaleY(1);
+    }
+    65% {
+        transform: scaleY(1);
+    }
+    70% {
+        transform: scaleY(1);
+    }
+    75% {
+        transform: scaleY(1);
+    }
+    80% {
+        transform: scaleY(1);
+    }
+    85% {
+        transform: scaleY(1);
+    }
+    90% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+/*  Trees Swaying  */
+
+@keyframes trees-1 {
+    0% {
+        transform: skew(0deg) translateX(0);
+    }
+    25% {
+        transform: skew(-1.5deg) translateX(11px);
+    }
+    50% {
+        transform: skew(0deg) translateX(0);
+    }
+    75% {
+        transform: skew(-1.5deg) translateX(11px);
+    }
+    100% {
+        transform: skew(0deg) translateX(0);
+    }
+}
+
+@keyframes trees-2 {
+    0% {
+        transform: skew(0deg) translateX(0);
+    }
+    25% {
+        transform: skew(-3.5deg) translateX(24px);
+    }
+    50% {
+        transform: skew(0deg) translateX(0);
+    }
+    75% {
+        transform: skew(-3.5deg) translateX(24px);
+    }
+    100% {
+        transform: skew(0deg) translateX(0);
+    }
+}
+
+
+/*  Bush Swaying  */
+
+@keyframes bush {
+    0% {
+        transform: skew(0deg) translateX(0);
+    }
+    25% {
+        transform: skew(-9.5deg) translateX(70px);
+    }
+    50% {
+        transform: skew(0deg) translateX(0);
+    }
+    75% {
+        transform: skew(-9.5deg) translateX(70px);
+    }
+    100% {
+        transform: skew(0deg) translateX(0);
+    }
+}
