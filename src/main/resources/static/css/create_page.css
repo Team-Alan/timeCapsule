@@ -107,8 +107,8 @@ form {
 
 .mug {
     position: absolute;
-    top: 0;
-    right: 35%;
+    top: -13%;
+    right: 0%;
     z-index: 1;
 }
 
