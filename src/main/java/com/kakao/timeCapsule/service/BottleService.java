@@ -13,21 +13,30 @@ public class BottleService {
     @Autowired
     private BottleMapper bottleMapper;
 
-    Bottle getBottle(int bottle_id) {
+    public Bottle getBottle(int bottle_id) {
         return bottleMapper.getBottle(bottle_id);
     }
 
-    List<Content> getContents(int bottle_id) {
+    public List<Content> getContents(int bottle_id) {
         return bottleMapper.getContents(bottle_id);
     }
 
     // 유리병 저장
-    void saveBottle(Bottle bottle) {
+    public void saveBottle(Bottle bottle) {
         bottleMapper.saveBottle(bottle);
     }
 
     // content 저장
-    void insertContent(Content content) {
+    public void insertContent(Content content) {
         bottleMapper.insertContent(content);
+    }
+
+    // maxId 가져오기
+    public int getMaxByBottles() {
+        return bottleMapper.getMaxIdByBottles();
+    }
+
+    public int getMaxByContents() {
+        return bottleMapper.getMaxIdByContents();
     }
 }

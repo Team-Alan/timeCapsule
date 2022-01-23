@@ -26,4 +26,26 @@
         from content
         where bottle_id=#{id}
     </select>
+
+    <insert id="saveBottle">
+        INSERT INTO bottles(id, create_date)
+        VALUES(#{bottle.id}, sysdate);
+    </insert>
+
+    <insert id="insertContent">
+        INSERT INTO bottles(id, content, uploadPath, fileName, write_date, bottle_id)
+        VALUES(#{id}, #{content}, uploadPath, fileName, write_date, bottle_id);
+    </insert>
+
+    <select id="getMaxIdByBottles">
+        select
+            max(id)
+        from bottles
+    </select>
+
+    <select id="getMaxIdByContents">
+        select
+            max(id)
+        from contents
+    </select>
 </mapper>

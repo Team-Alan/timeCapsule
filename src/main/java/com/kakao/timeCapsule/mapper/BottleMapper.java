@@ -22,4 +22,8 @@ public interface BottleMapper {
 
     // content 저장
     void insertContent(@Param("content") Content content);
+
+    //maxId 값 가져오기
+    int getMaxIdByBottles();
+    int getMaxIdByContents();
 }
