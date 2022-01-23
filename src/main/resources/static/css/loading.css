@@ -15,7 +15,11 @@ body {
   font-family:'Montserrat', sans-serif;
   font-weight:300;
   text-align:center;
-  background:#6998ab;
+  /* background:#6998ab; */
+  background-image:url('https://i.imgur.com/6Z5nX0r.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 body:after {
   content:'';
@@ -25,9 +29,12 @@ body:after {
   top:0;
   left:0;
   z-index:-1;
-  background:#6998ab;
-  background-size:cover;
-  background-position:50% 50%;  
+  /* background:#6998ab; */
+  background-image:url('https://i.imgur.com/6Z5nX0r.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-position:50% 50%;   */
 }
 #console {
   width:320px;
