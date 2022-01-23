@@ -33,10 +33,11 @@ public class PlanApiController {
      */
     @GetMapping("/api/v1/bottle")
     @ResponseBody
-    public void addBottle(@PathVariable Bottle bottle) {
+    public int addBottle(@PathVariable Bottle bottle) {
         bottle.setId(bottleService.getMaxByBottles() + 1);
         bottleService.saveBottle(bottle);
         System.out.println(">>>>>>>>>>>>>>>>>병 추가 완료>>>>>>>>>>>>>>>>>>>>>>>");
+        return bottle.getId();
     }
 
 
@@ -47,9 +48,10 @@ public class PlanApiController {
      */
     @GetMapping("/api/v1/content")
     @ResponseBody
-    public void addContent(@PathVariable Content content) {
+    public int addContent(@PathVariable Content content) {
         content.setId(bottleService.getMaxByContents() + 1);
         bottleService.insertContent(content);
         System.out.println(">>>>>>>>>>>>>>>>>병에 내용 추가>>>>>>>>>>>>>>>>>>>>>>>");
+        return content.getId();
     }
 }
