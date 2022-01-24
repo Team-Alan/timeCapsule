@@ -14,6 +14,10 @@ header {
     font-family: "Comic Sans MS";
     font-size:2rem;
 }
+
+#home:hover{
+    color:#ffffff;
+}
 .home:link, .home:visited{
     color:black;
     text-decoration: none;
@@ -72,6 +76,21 @@ button:hover {
         background-position: 100%;
     }
 }
+
+/* Audio
+#play, #mute{
+    border:none;
+    width: 40px;
+    height: 40px;
+    cursor:pointer;
+}
+#play{
+    background-image:url("play.png");
+}
+#mute{
+    background-image:url("mute.png");
+}
+*/
 
 /* Body */
 body {
