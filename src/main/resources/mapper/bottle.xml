@@ -2,6 +2,62 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.kakao.timeCapsule.mapper.bottleMapper">
+<mapper namespace="com.kakao.timeCapsule.mapper.BottleMapper">
 
+    <resultMap id="content" type="com.kakao.timeCapsule.domain.Content">
+        <result property="id" column="id" />
+        <result property="content" column="content" />
+        <result property="uploadPath" column="uploadPath" />
+        <result property="fileName" column="fileName" />
+        <result property="write_date" column="write_date" />
+        <result property="bottle_id" column="bottle_id" />
+    </resultMap>
+
+    <select id="getBottle" resultType="int">
+        select
+            id
+        from bottle
+        where id != #{id}
+    </select>
+
+    <select id="getContents" resultMap="content">
+        <choose>
+            <when test="bottle_id == null || bottle_id == 0">
+                select * from (
+                    select @ROWNUM := @ROWNUM + 1 AS ROWNUM, a.* from contents a, (select @ROWNUM := 0) tmp
+                    order by rand()
+                ) b
+                where ROWNUM = 1
+            </when>
+            <otherwise>
+                select
+                *
+                from content
+                where bottle_id != #{id}
+            </otherwise>
+        </choose>
+
+    </select>
+
+    <insert id="saveBottle">
+        INSERT INTO bottles(id, create_date)
+        VALUES(#{bottle.id}, sysdate());
+    </insert>
+
+    <insert id="insertContent">
+        INSERT INTO bottles(id, content, uploadPath, fileName, write_date, bottle_id)
+        VALUES(#{id}, #{content}, #{uploadPath}, #{fileName}, sysdate(), #{bottle_id});
+    </insert>
+
+    <select id="getMaxIdByBottles">
+        select
+            max(id)
+        from bottles
+    </select>
+
+    <select id="getMaxIdByContents">
+        select
+            max(id)
+        from contents
+    </select>
 </mapper>
