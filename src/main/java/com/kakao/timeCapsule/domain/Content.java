@@ -2,6 +2,7 @@ package com.kakao.timeCapsule.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -10,6 +11,5 @@ public class Content {
     private String content;
     private String uploadPath;
     private String fileName;
-    private String write_date;
-    private int bottle_id;
+    private int bottleId;
 }

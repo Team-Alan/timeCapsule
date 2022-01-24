@@ -21,20 +21,32 @@
     </select>
 
     <select id="getContents" resultMap="content">
-        select
-            *
-        from content
-        where bottle_id=#{id}
+        <choose>
+            <when test="bottle_id == null || bottle_id == 0">
+                select * from (
+                    select @ROWNUM := @ROWNUM + 1 AS ROWNUM, a.* from contents a, (select @ROWNUM := 0) tmp
+                    order by rand()
+                ) b
+                where ROWNUM = 1
+            </when>
+            <otherwise>
+                select
+                *
+                from content
+                where bottle_id != #{id}
+            </otherwise>
+        </choose>
+
     </select>
 
     <insert id="saveBottle">
         INSERT INTO bottles(id, create_date)
-        VALUES(#{bottle.id}, sysdate);
+        VALUES(#{bottle.id}, sysdate());
     </insert>
 
     <insert id="insertContent">
         INSERT INTO bottles(id, content, uploadPath, fileName, write_date, bottle_id)
-        VALUES(#{id}, #{content}, uploadPath, fileName, write_date, bottle_id);
+        VALUES(#{id}, #{content}, #{uploadPath}, #{fileName}, sysdate(), #{bottle_id});
     </insert>
 
     <select id="getMaxIdByBottles">

@@ -5,7 +5,6 @@ import com.kakao.timeCapsule.domain.Content;
 import com.kakao.timeCapsule.mapper.BottleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -28,15 +27,8 @@ public class BottleService {
 
     // content 저장
     public void insertContent(Content content) {
+        int id = bottleMapper.getMaxIdByContents() + 1;
+        content.setId(id);
         bottleMapper.insertContent(content);
-    }
-
-    // maxId 가져오기
-    public int getMaxByBottles() {
-        return bottleMapper.getMaxIdByBottles();
-    }
-
-    public int getMaxByContents() {
-        return bottleMapper.getMaxIdByContents();
     }
 }

@@ -22,19 +22,19 @@ public class ContentApiController {
      */
     @GetMapping("/api/v1/bottle/{bottle_id}")
     @ResponseBody
-    public List<Content> findByBottle(@PathVariable int bottle_id) {
+    public List<Content> findByBottle(@PathVariable(required = false) int bottle_id) {
         return bottleService.getContents(bottle_id);
     }
 
     /**
      * bottle 등록
-     * @param bottle
      * @return
      */
-    @GetMapping("/api/v1/bottle")
+    @PostMapping("/api/v1/bottle")
     @ResponseBody
-    public int addBottle(@PathVariable Bottle bottle) {
-        bottle.setId(bottleService.getMaxByBottles() + 1);
+    public int addBottle() {
+        Bottle bottle = new Bottle();
+//        bottle.setId(bottleService.getMaxByBottles() + 1);
         bottleService.saveBottle(bottle);
         System.out.println(">>>>>>>>>>>>>>>>>병 추가 완료>>>>>>>>>>>>>>>>>>>>>>>");
         return bottle.getId();
@@ -42,14 +42,13 @@ public class ContentApiController {
 
 
     /**
-     * bottle 등록
+     * content 등록
      * @param content
      * @return
      */
-    @GetMapping("/api/v1/content")
+    @PostMapping("/api/v1/content")
     @ResponseBody
     public int addContent(@PathVariable Content content) {
-        content.setId(bottleService.getMaxByContents() + 1);
         bottleService.insertContent(content);
         System.out.println(">>>>>>>>>>>>>>>>>병에 내용 추가>>>>>>>>>>>>>>>>>>>>>>>");
         return content.getId();
