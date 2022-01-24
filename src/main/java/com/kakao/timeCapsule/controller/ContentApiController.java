@@ -11,7 +11,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-public class PlanApiController {
+public class ContentApiController {
 
     private final BottleService bottleService;
 
