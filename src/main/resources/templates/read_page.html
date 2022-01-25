@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Read</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+        <link rel="stylesheet" href="../static/css/read_page.css" />
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <iframe class="background" src="./home_svg.html" frameborder="0"></iframe>
+        <!-- <iframe src="./textdesign.html" frameborder="0"></iframe> -->
+        <header>
+            <div><a href="home.html" class="home" id="home">TEAM Alan</a></div>
+            <div><button onclick="location.href='create_page.html'">Send a Message</button></div>
+        </header>
+
+        <form>
+            <div class="paper">
+                <div class="mug">
+                    <div class="coffee-mug"></div>
+                </div>
+                <div class="lines">
+                    <div class="text" contenteditable spellcheck="false">You can edit this text! <br /><br /></div>
+                </div>
+                <div class="btn_bar">
+                    <button class="like_btn"><ion-icon class="heart" name="heart"></ion-icon>1</button>
+                    <button class="button"><span>Next</span></button>
+                </div>
+            </div>
+        </form>
+    </body>
+    <script>
+        const clicked = document.querySelector('.like_btn')
+
+        clicked.addEventListener('click', e => {
+            e.preventDefault()
+            clicked.classList.toggle('clicked')
+        })
+    </script>
+</html>
