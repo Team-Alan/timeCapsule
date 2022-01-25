@@ -1,5 +1,6 @@
 const game_box = document.getElementById("console");
 const start_btn = document.getElementById("start_btn");
+const next_btn = document.getElementById("next_btn");
 const water_box = document.getElementById("water_box");
 const hook = document.getElementById("hook");
 const score = document.getElementById("score");
@@ -7,6 +8,16 @@ var offset = game_box.getBoundingClientRect();
 var d = document.getElementById("start_line");
 var fish_count = 20;
 var depth = 150;
+var firstCatch = 0;
+
+function showNextbtn (){
+  if (firstCatch == 0){
+    firstCatch += 1;
+  }
+  else {
+    next_btn.classList.toggle("hide_start");
+  }
+}
 
 function addFish() {
   var size = Math.floor(Math.random() * 100) + 25;
@@ -39,6 +50,7 @@ start_btn.addEventListener("click", function () {
   hook.innerHTML = '<div id="hook_hitbox"></div>';
   var hook_hb = document.getElementById("hook_hitbox");
   start_btn.classList.toggle("hide_start");
+  showNextbtn();
   water_box.innerHTML = "";
   depth = 150;
   for (var i = 0; i < fish_count; i++) {
@@ -99,6 +111,7 @@ start_btn.addEventListener("click", function () {
 
         clearInterval(checkForCatch);
         start_btn.classList.toggle("hide_start");
+        showNextbtn();
       }, 10000);
     }, 4000);
   }

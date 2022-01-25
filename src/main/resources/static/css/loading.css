@@ -34,6 +34,60 @@ header {
   text-decoration: none;
 }
 
+/* 버튼 */
+main{
+  margin:auto;
+}
+
+button {
+  -webkit-appearance: none;
+  background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+  background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+  background-size: 500%;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  color: #fff;
+  cursor: pointer;
+  font: 1.5rem Raleway, sans-serif;
+  font-family: "Comic Sans MS";
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 4rem;
+  letter-spacing: 0.05rem;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 15rem;
+  margin:auto;
+  display:block;
+}
+
+button:hover {
+  animation-name: gradient;
+  -webkit-animation-name: gradient;
+  animation-duration: 2s;
+  -webkit-animation-duration: s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100%;
+  }
+}
+
+
 :root {
   --fish1:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=8afee98e-ebcc-56a1-96e0-55e36a46264b&637413072121907329');
   --fish2:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=1fa86086-fd43-50c4-b38e-dfc9a84d03df&637413072212638614');
@@ -116,6 +170,27 @@ body:after {
   margin:10px auto;
   padding:10px;
   border-radius:5px;
+}
+#next_btn {
+  width:100%;
+  box-sizing:border-box;
+  padding:10px;
+  position:absolute;
+  left:0;
+  top:390px;
+  transition:.5s;  
+}
+#next_btn button{
+  background:white;
+  max-width:57%;
+  height: 100%;
+  background-size: 100%;
+  margin:10px auto;
+  padding:10px;
+  border-radius:5px;
+  color: black;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: medium;
 }
 
 #svgContainer {
