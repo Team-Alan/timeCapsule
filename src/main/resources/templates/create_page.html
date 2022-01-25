@@ -25,9 +25,15 @@
                     <div class="text" contenteditable spellcheck="false">You can edit this text! <br /><br /></div>
                 </div>
                 <div>
-                    <button class="button"><span>Submit</span></button>
+                    <button class="button" onclick="location.href='loading.html'"><span>Submit</span></button>
                 </div>
             </div>
         </form>
     </body>
+    <script>
+        document.querySelector('form').addEventListener('submit', e => {
+            e.preventDefault()
+            window.location.href = './loading.html'
+        })
+    </script>
 </html>
