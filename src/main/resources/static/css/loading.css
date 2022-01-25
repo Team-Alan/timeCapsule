@@ -1,3 +1,39 @@
+*{
+  margin:0;
+  padding: 0;
+}
+.background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+
+/* 상단바 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  padding: 1rem;
+  color: black;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Comic Sans MS";
+  font-size:2rem;
+}
+
+#home:hover{
+  color:#ffffff;
+}
+.home:link, .home:visited{
+  color:black;
+  text-decoration: none;
+}
+
 :root {
   --fish1:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=8afee98e-ebcc-56a1-96e0-55e36a46264b&637413072121907329');
   --fish2:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=1fa86086-fd43-50c4-b38e-dfc9a84d03df&637413072212638614');
@@ -14,12 +50,12 @@ body {
   padding:0;
   font-family:'Montserrat', sans-serif;
   font-weight:300;
-  text-align:center;
-  /* background:#6998ab; */
+  /*text-align:center;
+   background:#6998ab;
   background-image:url('https://i.imgur.com/6Z5nX0r.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 body:after {
   content:'';
@@ -28,23 +64,28 @@ body:after {
   position:absolute;
   top:0;
   left:0;
+
   z-index:-1;
-  /* background:#6998ab; */
-  background-image:url('https://i.imgur.com/6Z5nX0r.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  /* background-position:50% 50%;   */
+  /*background:#6998ab;
+ background-image:url('https://i.imgur.com/6Z5nX0r.jpg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ /* background-position:50% 50%;   */
 }
 #console {
+  left: 40%;
+  top: 20%;
+  position: absolute;
+
   width:320px;
   height:480px;
-  margin:50px auto;
-  position:relative;
+  /*margin:50px auto;
+  position:relative;*/
   overflow:hidden;
   background:radial-gradient(circle at 50% 25%, gold, tomato 50%);
-  background-position: 90% 0;
-  background-repeat:no-repeat;
+  /*background-position: 90% 0;
+  background-repeat:no-repeat;*/
   box-sizing:border-box;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
