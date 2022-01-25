@@ -64,6 +64,7 @@ button {
   user-select: none;
   width: 15rem;
   margin:auto;
+  margin-right: 10px;
   display:block;
 }
 
