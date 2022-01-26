@@ -13,7 +13,7 @@
 <iframe class="background" src="./home_svg.html" frameborder="0"></iframe>
 <header>
   <div><a href="home.html" class="home" id="home">TEAM Alan</a></div>
-  <div><button onclick="location.href='create_page.html'">Send a Message</button></div>
+  <div><button onclick="location.href='/create'">Send a Message</button></div>
 </header>
 
   <div id='console'>
@@ -29,7 +29,9 @@
       <h3>Drop Line</h3>
     </div>
     <div id='next_btn' class="hide_start">
-      <button onclick="location.href='read_page.html'">
+      <form action="/read"></form>
+      <button type="submit">
+        <input type="hidden" value="${id}" name="id">
         <h3>Next</h3>
       </button>
     </div>

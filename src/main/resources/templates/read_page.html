@@ -15,7 +15,7 @@
         <!-- <iframe src="./textdesign.html" frameborder="0"></iframe> -->
         <header>
             <div><a href="home.html" class="home" id="home">TEAM Alan</a></div>
-            <div><button class="create_btn" onclick="location.href='create_page.html'">Send a Message</button></div>
+            <div><button class="create_btn" onclick="location.href='/create'">Send a Message</button></div>
         </header>
 
         <form>
@@ -28,6 +28,7 @@
                 </div>
                 <div class="btn_bar">
                     <button class="like_btn"><ion-icon class="heart" name="heart"></ion-icon>1</button>
+                    <input type="hidden" name="id" value="${id}">
                     <button class="button"><span>Next</span></button>
                 </div>
             </div>
@@ -43,7 +44,7 @@
 
         document.querySelector('form').addEventListener('submit', e => {
             e.preventDefault()
-            window.location.href = './loading.html'
+            window.location.href = './loading'
         })
     </script>
 </html>

@@ -13,16 +13,9 @@
         <result property="bottle_id" column="bottle_id" />
     </resultMap>
 
-    <select id="getBottle" resultType="int">
-        select
-            id
-        from bottle
-        where id != #{id}
-    </select>
-
-    <select id="getContents" resultMap="content">
+    <select id="getContent" resultMap="content">
         <choose>
-            <when test="bottle_id == null || bottle_id == 0">
+            <when test="id == null || id == 0">
                 select * from (
                     select @ROWNUM := @ROWNUM + 1 AS ROWNUM, a.* from contents a, (select @ROWNUM := 0) tmp
                     order by rand()
@@ -33,29 +26,18 @@
                 select
                 *
                 from content
-                where bottle_id != #{id}
+                where content_id != #{id}
             </otherwise>
         </choose>
 
     </select>
 
-    <insert id="saveBottle">
-        INSERT INTO bottles(id, create_date)
-        VALUES(#{bottle.id}, sysdate());
-    </insert>
-
     <insert id="insertContent">
-        INSERT INTO bottles(id, content, uploadPath, fileName, write_date, bottle_id)
-        VALUES(#{id}, #{content}, #{uploadPath}, #{fileName}, sysdate(), #{bottle_id});
+        INSERT INTO bottles(id, content, uploadPath, fileName, write_date, like)
+        VALUES(#{id}, #{content}, #{uploadPath}, #{fileName}, sysdate(), 0);
     </insert>
 
-    <select id="getMaxIdByBottles">
-        select
-            max(id)
-        from bottles
-    </select>
-
-    <select id="getMaxIdByContents">
+    <select id="getMaxIdByContent">
         select
             max(id)
         from contents
