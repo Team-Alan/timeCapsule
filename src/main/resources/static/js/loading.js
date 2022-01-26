@@ -41,10 +41,7 @@ function addFish() {
   water_box.appendChild(f).appendChild(hb);
 }
 
-
-for (var i = 0; i < fish_count; i++) {
-  addFish();
-}
+addFish();
 
 start_btn.addEventListener("click", function () {
   var offset = game_box.getBoundingClientRect();
