@@ -24,7 +24,7 @@ function addFish() {
   var l = Math.random() < 0.5 ? "left" : "right";
   var loc = Math.random() * size + 75;
   var f = document.createElement("div");
-  f.className = "fish fish" + Math.ceil(Math.random() * 7);
+  f.className = "fish fish" + Math.ceil(Math.random() * 8);
   f.classList.add(l);
   f.style.backgroundSize = "100% auto";
   f.style.backgroundRepeat = "no-repeat";
@@ -40,6 +40,7 @@ function addFish() {
   hb.className = "hitbox";
   water_box.appendChild(f).appendChild(hb);
 }
+
 
 for (var i = 0; i < fish_count; i++) {
   addFish();

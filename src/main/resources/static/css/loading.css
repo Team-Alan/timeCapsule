@@ -97,6 +97,7 @@ button:hover {
   --fish5:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=84222f0f-d43e-53ea-be16-ce670d1b2f51&637413072488561394');
   --fish6:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=1c662cbd-9c36-58b3-b107-7f6831d029cd&637413072568720353');
   --fish7:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=c7f12a90-8954-5789-a0d5-ecb2025afef4&637413072660755362');
+  --bottle:url('https://i.imgur.com/zqHsQ54.png');
   --hook:url('https://contentservice.mc.reyrey.net/image_v1.0.0/?id=cbf58c7c-80f7-506c-b1fb-ec9fd0ef20d1&637413991691740886');
 }
 
@@ -341,6 +342,9 @@ body:after {
 }
 .fish7 {
   background:var(--fish7);
+}
+.fish8 {
+  background:var(--bottle);
 }
 
 #hook_hitbox {
