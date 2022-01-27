@@ -16,7 +16,7 @@
             <div><button class="create_btn" onclick="location.href='create_page.html'">Send a Message</button></div>
         </header>
 
-        <form>
+        <form method="post" enctype="multipart/form-data">
             <div class="paper">
                 <div class="mug">
                     <div class="coffee-mug"></div>
@@ -24,6 +24,9 @@
                 <div class="lines">
                     <div class="text" contenteditable spellcheck="false">You can edit this text! <br /><br /></div>
                 </div>
+                <!-- <div class="upload">
+                    <input name="file" type="file" accept="image/*, .txt" class="file-input" id="file">
+                </div> -->
                 <div>
                     <button class="button" onclick="location.href='loading.html'"><span>Submit</span></button>
                 </div>
